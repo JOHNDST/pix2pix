@@ -27,7 +27,7 @@ class Discriminator(nn.Module):
     """Basic Discriminator"""
     def __init__(self,):
         super().__init__()
-        self.block1 = BasicBlock(3, 64, norm=False)
+        self.block1 = BasicBlock(9, 64, norm=False)
         self.block2 = BasicBlock(64, 128)
         self.block3 = BasicBlock(128, 256)
         self.block4 = BasicBlock(256, 512)
@@ -48,7 +48,7 @@ class ConditionalDiscriminator(nn.Module):
     """Conditional Discriminator"""
     def __init__(self,):
         super().__init__()
-        self.block1 = BasicBlock(6, 64, norm=False)
+        self.block1 = BasicBlock(10, 64, norm=False)
         self.block2 = BasicBlock(64, 128)
         self.block3 = BasicBlock(128, 256)
         self.block4 = BasicBlock(256, 512)
